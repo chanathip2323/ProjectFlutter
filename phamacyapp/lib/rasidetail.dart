@@ -28,8 +28,8 @@ class PokeDetail extends StatelessWidget {
                     style:
                         TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
                   ),
-                  Text("....${pokemon.height}...."),
-                  Text("....${pokemon.weight}...."),
+                  Text("${pokemon.height}"),
+                  Text("${pokemon.weight}"),
                   Text(
                     "สรรพคุณ",
                     style: TextStyle(fontWeight: FontWeight.bold),
@@ -38,7 +38,7 @@ class PokeDetail extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: pokemon.type
                         .map((t) => FilterChip(
-                            backgroundColor: Colors.amber,
+                            backgroundColor: Colors.blue,
                             label: Text(t),
                             onSelected: (b) {}))
                         .toList(),
@@ -49,7 +49,7 @@ class PokeDetail extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: pokemon.weaknesses
                         .map((t) => FilterChip(
-                            backgroundColor: Colors.red,
+                            backgroundColor: Colors.blue,
                             label: Text(
                               t,
                               style: TextStyle(color: Colors.white),
@@ -65,7 +65,7 @@ class PokeDetail extends StatelessWidget {
                         ? <Widget>[Text("This is the final form")]
                         : pokemon.nextEvolution
                             .map((n) => FilterChip(
-                                  backgroundColor: Colors.green,
+                                  backgroundColor: Colors.blue,
                                   label: Text(
                                     n.name,
                                     style: TextStyle(color: Colors.white),
