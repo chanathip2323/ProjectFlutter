@@ -39,7 +39,7 @@ class PokeDetail extends StatelessWidget {
                                   backgroundColor: Colors.amber,
                                   label: Text(
                                     n.name,
-                                    style: TextStyle(color: Colors.white),
+                                    style: TextStyle(color: Colors.brown),
                                   ),
                                   onSelected: (b) {},
                                 ))
