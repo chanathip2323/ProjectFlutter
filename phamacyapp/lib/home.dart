@@ -10,9 +10,9 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    var purple = Colors.brown;
+    var purple = Colors.blueGrey;
     return Scaffold(
-        backgroundColor: Colors.brown[200],
+        backgroundColor: Colors.blueGrey[200],
         appBar: AppBar(
           title: Text("HOME"),
           backgroundColor: purple,
