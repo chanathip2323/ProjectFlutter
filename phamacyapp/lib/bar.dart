@@ -47,8 +47,8 @@ class _BarNavyState extends State<BarNavy> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color(0xffffcc5c),
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        unselectedItemColor: Colors.blueGrey,
+        selectedItemColor: Colors.brown[200],
+        unselectedItemColor: Colors.brown,
         onTap: onTappedBar,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(title: Text('Home'), icon: Icon(Icons.home)),
