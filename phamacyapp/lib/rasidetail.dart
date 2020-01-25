@@ -9,7 +9,7 @@ class PokeDetail extends StatelessWidget {
   bodyWidget(BuildContext context) => Stack(
         children: <Widget>[
           Positioned(
-            height: MediaQuery.of(context).size.height / 1.5,
+            height: MediaQuery.of(context).size.height / 1.8,
             width: MediaQuery.of(context).size.width - 25,
             left: 10.0,
             top: MediaQuery.of(context).size.height * 0.13,
@@ -21,7 +21,7 @@ class PokeDetail extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   SizedBox(
-                    height: 30.0,
+                    height: 0.0,
                   ),
                   Text(
                     pokemon.name,
@@ -30,22 +30,6 @@ class PokeDetail extends StatelessWidget {
                   ),
                   Text("^^${pokemon.height}^^"),
                   Text("^^${pokemon.weight}^^"),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: pokemon.nextEvolution == null
-                        ? <Widget>[Text("This is the final form")]
-                        : pokemon.nextEvolution
-                            .map((n) => FilterChip(
-                                  backgroundColor: Colors.amber,
-                                  label: Text(
-                                    n.name,
-                                    style: TextStyle(color: Colors.brown),
-                                  ),
-                                  onSelected: (b) {},
-                                ))
-                            .toList(),
-                  )
-
                   //Text(
                   //"สรรพคุณ",
                   //style: TextStyle(fontWeight: FontWeight.bold),
