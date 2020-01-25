@@ -26,10 +26,25 @@ class PokeDetail extends StatelessWidget {
                   Text(
                     pokemon.name,
                     style:
-                        TextStyle(fontSize: 27.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
                   ),
                   Text("^^${pokemon.height}^^"),
                   Text("^^${pokemon.weight}^^"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: pokemon.nextEvolution == null
+                        ? <Widget>[Text("This is the final form")]
+                        : pokemon.nextEvolution
+                            .map((n) => FilterChip(
+                                  backgroundColor: Colors.amber,
+                                  label: Text(
+                                    n.name,
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  onSelected: (b) {},
+                                ))
+                            .toList(),
+                  )
 
                   //Text(
                   //"สรรพคุณ",
@@ -60,21 +75,21 @@ class PokeDetail extends StatelessWidget {
                   //),
                   //Text("ข้อควรระวังในการใช้ยา",
                   //style: TextStyle(fontWeight: FontWeight.bold)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: pokemon.nextEvolution == null
-                        ? <Widget>[Text("This is the final form")]
-                        : pokemon.nextEvolution
-                            .map((n) => FilterChip(
-                                  backgroundColor: Colors.amber,
-                                  label: Text(
-                                    n.name,
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                                  onSelected: (b) {},
-                                ))
-                            .toList(),
-                  )
+                  //Row(
+                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  //children: pokemon.nextEvolution == null
+                  //? <Widget>[Text("This is the final form")]
+                  //: pokemon.nextEvolution
+                  //.map((n) => FilterChip(
+                  //backgroundColor: Colors.amber,
+                  //label: Text(
+                  //n.name,
+                  //style: TextStyle(color: Colors.white),
+                  //),
+                  //onSelected: (b) {},
+                  //))
+                  //.toList(),
+                  //)
                 ],
               ),
             ),
