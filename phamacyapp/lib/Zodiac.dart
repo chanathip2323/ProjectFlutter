@@ -32,15 +32,13 @@ class ZodiacPageState extends State<ZodiacPage> {
     setState(() {});
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange[400],
+      backgroundColor: Colors.brown[400],
       appBar: AppBar(
         title: Text("Zodiac"),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.blueGrey,
       ),
       body: pokeHub == null
           ? Center(
@@ -71,8 +69,8 @@ class ZodiacPageState extends State<ZodiacPage> {
                                   Container(
                                     height: MediaQuery.of(context).size.height *
                                         0.14,
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.28,
+                                    width: MediaQuery.of(context).size.width *
+                                        0.28,
                                     decoration: BoxDecoration(
                                         image: DecorationImage(
                                             fit: BoxFit.cover,
@@ -94,7 +92,6 @@ class ZodiacPageState extends State<ZodiacPage> {
                       ))
                   .toList(),
             ),
-    
     );
   }
 }
