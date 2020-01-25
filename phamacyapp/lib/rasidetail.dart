@@ -38,7 +38,7 @@ class PokeDetail extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: pokemon.type
                         .map((t) => FilterChip(
-                            backgroundColor: Colors.blue,
+                            backgroundColor: Colors.blueGrey,
                             label: Text(t),
                             onSelected: (b) {}))
                         .toList(),
@@ -49,7 +49,7 @@ class PokeDetail extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: pokemon.weaknesses
                         .map((t) => FilterChip(
-                            backgroundColor: Colors.blue,
+                            backgroundColor: Colors.blueGrey,
                             label: Text(
                               t,
                               style: TextStyle(color: Colors.white),
@@ -65,7 +65,7 @@ class PokeDetail extends StatelessWidget {
                         ? <Widget>[Text("This is the final form")]
                         : pokemon.nextEvolution
                             .map((n) => FilterChip(
-                                  backgroundColor: Colors.blue,
+                                  backgroundColor: Colors.blueGrey,
                                   label: Text(
                                     n.name,
                                     style: TextStyle(color: Colors.white),
