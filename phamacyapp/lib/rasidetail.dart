@@ -28,52 +28,52 @@ class PokeDetail extends StatelessWidget {
                     style:
                         TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
                   ),
-                  Text("${pokemon.height}"),
-                  Text("${pokemon.weight}"),
-                  Text(
-                    "สรรพคุณ",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: pokemon.type
-                        .map((t) => FilterChip(
-                            backgroundColor: Colors.amber,
-                            label: Text(t),
-                            onSelected: (b) {}))
-                        .toList(),
-                  ),
-                  Text("วิธีการใช้",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: pokemon.weaknesses
-                        .map((t) => FilterChip(
-                            backgroundColor: Colors.amber,
-                            label: Text(
-                              t,
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            onSelected: (b) {}))
-                        .toList(),
-                  ),
-                  Text("ข้อควรระวังในการใช้ยา",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: pokemon.nextEvolution == null
-                        ? <Widget>[Text("This is the final form")]
-                        : pokemon.nextEvolution
-                            .map((n) => FilterChip(
-                                  backgroundColor: Colors.amber,
-                                  label: Text(
-                                    n.name,
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                                  onSelected: (b) {},
-                                ))
-                            .toList(),
-                  )
+                  Text("^^${pokemon.height}^^"),
+                  Text("^^${pokemon.weight}^^"),
+                  //Text(
+                  //"สรรพคุณ",
+                  //style: TextStyle(fontWeight: FontWeight.bold),
+                  //),
+                  //Row(
+                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  //children: pokemon.type
+                  //.map((t) => FilterChip(
+                  //backgroundColor: Colors.amber,
+                  //label: Text(t),
+                  //onSelected: (b) {}))
+                  //.toList(),
+                  //),
+                  //Text("วิธีการใช้",
+                  //style: TextStyle(fontWeight: FontWeight.bold)),
+                  //Row(
+                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  //children: pokemon.weaknesses
+                  //.map((t) => FilterChip(
+                  //backgroundColor: Colors.amber,
+                  //label: Text(
+                  //t,
+                  //style: TextStyle(color: Colors.white),
+                  //),
+                  //onSelected: (b) {}))
+                  //.toList(),
+                  //),
+                  //Text("ข้อควรระวังในการใช้ยา",
+                  //style: TextStyle(fontWeight: FontWeight.bold)),
+                  //Row(
+                  //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  //children: pokemon.nextEvolution == null
+                  //? <Widget>[Text("This is the final form")]
+                  //: pokemon.nextEvolution
+                  //.map((n) => FilterChip(
+                  //backgroundColor: Colors.amber,
+                  //label: Text(
+                  //n.name,
+                  //style: TextStyle(color: Colors.white),
+                  //),
+                  //onSelected: (b) {},
+                  //))
+                  //.toList(),
+                  //)
                 ],
               ),
             ),
