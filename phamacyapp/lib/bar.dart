@@ -54,10 +54,10 @@ class _BarNavyState extends State<BarNavy> {
           BottomNavigationBarItem(title: Text('Home'), icon: Icon(Icons.home)),
           BottomNavigationBarItem(
               title: Text('Zodiac'), icon: Icon(Icons.star)),
-          BottomNavigationBarItem(
-            title: Text('Year'),
-            icon: Icon(Icons.pets),
-          ),
+          //BottomNavigationBarItem(
+          //title: Text('Year'),
+          //icon: Icon(Icons.pets),
+          //),
           BottomNavigationBarItem(
             title: Text('Me'),
             icon: Icon(Icons.face),
