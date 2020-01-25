@@ -45,10 +45,10 @@ class _BarNavyState extends State<BarNavy> {
     return Scaffold(
       body: _children[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xffffcc5c),
+        backgroundColor: Color(0xFF795548),
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.brown,
-        unselectedItemColor: Colors.brown[200],
+        unselectedItemColor: Colors.grey,
         onTap: onTappedBar,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(title: Text('Home'), icon: Icon(Icons.home)),

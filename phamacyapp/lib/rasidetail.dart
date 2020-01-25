@@ -56,7 +56,7 @@ class PokeDetail extends StatelessWidget {
                   //),
                   //onSelected: (b) {}))
                   //.toList(),
-                  //),
+                  // ),
                   //Text("ข้อควรระวังในการใช้ยา",
                   //style: TextStyle(fontWeight: FontWeight.bold)),
                   //Row(
@@ -96,10 +96,10 @@ class PokeDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.deepOrange[100],
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.grey[300],
+        backgroundColor: Colors.deepOrange[200],
         title: Text(pokemon.name),
       ),
       body: bodyWidget(context),
