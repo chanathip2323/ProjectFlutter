@@ -45,7 +45,7 @@ class _BarNavyState extends State<BarNavy> {
     return Scaffold(
       body: _children[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xFF795548),
+        backgroundColor: Color(0xFFEFEBE9),
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.brown,
         unselectedItemColor: Colors.grey,
