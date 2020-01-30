@@ -12,18 +12,20 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-        seconds: 1,
+        seconds: 2,
         navigateAfterSeconds: BarNavy(),
         title: Text(
-          'Tikker Horoscope',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0 ,
-            color: Colors.pink[300] ,fontStyle:FontStyle.italic),
+          'Boumbim Medicine room',
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 30.0,
+              color: Colors.pink[300],
+              fontStyle: FontStyle.italic),
         ),
-        image: Image.asset('asset/images/tik1.png'),
-        backgroundColor: Colors.pink[100],
-        styleTextUnderTheLoader: TextStyle(color: Colors.deepPurple),
+        image: Image.asset('assets/medication.png'),
+        backgroundColor: Colors.brown,
+        styleTextUnderTheLoader: TextStyle(color: Colors.grey[900]),
         photoSize: 150.0,
-        loaderColor: Colors.pink[100]
-        );
+        loaderColor: Colors.brown);
   }
 }

@@ -16,8 +16,6 @@ class _BarNavyState extends State<BarNavy> {
     HomePage(),
     ZodiacPage(),
     YearPage(),
-    AboutMePage(),
-    AboutMePage()
   ];
   PageController _pageController;
   void onTappedBar(int index) {
@@ -53,17 +51,17 @@ class _BarNavyState extends State<BarNavy> {
         unselectedItemColor: Colors.grey,
         onTap: onTappedBar,
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(title: Text('Home'), icon: Icon(Icons.home)),
+          BottomNavigationBarItem(title: Text('home'), icon: Icon(Icons.home)),
           BottomNavigationBarItem(
-              title: Text('Inhouses'), icon: Icon(Icons.star)),
+              title: Text('Inhouses'), icon: Icon(Icons.local_pharmacy)),
           BottomNavigationBarItem(
             title: Text('Herb'),
-            icon: Icon(Icons.pets),
+            icon: Icon(Icons.spa),
           ),
-          BottomNavigationBarItem(
-            title: Text('Me'),
-            icon: Icon(Icons.face),
-          ),
+          //BottomNavigationBarItem(
+          //title: Text('Me'),
+          //icon: Icon(Icons.face),
+          //),
         ],
       ),
     );

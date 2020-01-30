@@ -8,37 +8,65 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> with TickerProviderStateMixin {
-  double currentOpacity = 0;
-  Animation<double> starAnimation;
+  AnimationController animationController;
+
+  @override
+  void initState() {
+    animationController = AnimationController(
+        duration: Duration(milliseconds: 1200), vsync: this);
+    animationController.addListener(() {
+      setState(() {
+        print(animationController.value);
+      });
+    });
+    super.initState();
+    animationController.forward();
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+  Widget buildScaleTransitionWidget(
+      {AnimationController controller, Widget widget}) {
+    return AnimatedBuilder(
+        animation: controller,
+        child: widget,
+        builder: (context, child) {
+          return ScaleTransition(
+              scale: Tween<double>(begin: 0, end: 1).animate(controller),
+              child: child);
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: new Scaffold(
-        backgroundColor: Color(0xffbcaaa4),
-        appBar: AppBar(
-          title: Text("The world of Phamacy"),
-          backgroundColor: Colors.brown,
-        ),
-        body: new Center(
-          child: AnimatedOpacity(
-            opacity: currentOpacity,
-            duration: Duration(seconds: 1),
-            child: Image.asset("assets/icon/medication.png"),
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
+    return Scaffold(
+      backgroundColor: Color(0xffbcaaa4),
+      appBar: AppBar(
+        title: Text("The world of Phamacy"),
+        backgroundColor: Colors.brown,
+      ),
+      body: Center(
+          child: buildScaleTransitionWidget(
+              controller: animationController,
+              widget: Container(
+                width: 800,
+                height: 800,
+                child: Image.asset("assets/medication.png"),
+              ))),
+      floatingActionButton: FloatingActionButton(
           child: Icon(Icons.play_arrow),
           onPressed: () {
-            // เพิ่ม on pressed
-            setState(() {
-              currentOpacity = currentOpacity == 0 ? 1 : 0;
-            });
+            if (animationController.isCompleted) {
+              animationController.reverse();
+            } else {
+              animationController.forward();
+            }
           },
-          backgroundColor: Color(0xff7955548),
-        ),
-      ),
+          backgroundColor: Color(0xff7955548)),
     );
   }
 }
