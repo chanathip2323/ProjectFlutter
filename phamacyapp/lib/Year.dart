@@ -13,7 +13,7 @@ class YearPage extends StatefulWidget {
 
 class YearPageState extends State<YearPage> {
   var url =
-      "https://raw.githubusercontent.com/chadaporn29797/tiktry/master/year.json";
+      "https://raw.githubusercontent.com/chanathip2323/ProjectFlutter/master/phamacyapp/assets/icon/year.json";
 
   PokeHub pokeHub;
 
@@ -32,15 +32,13 @@ class YearPageState extends State<YearPage> {
     setState(() {});
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pink[100],
+      backgroundColor: Colors.brown[200],
       appBar: AppBar(
-        title: Text("The Year of The Zodiac"),
-        backgroundColor: Colors.pink[800],
+        title: Text("Herbal Treatment"),
+        backgroundColor: Colors.brown,
       ),
       body: pokeHub == null
           ? Center(
@@ -71,8 +69,8 @@ class YearPageState extends State<YearPage> {
                                   Container(
                                     height: MediaQuery.of(context).size.height *
                                         0.10,
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.19,
+                                    width: MediaQuery.of(context).size.width *
+                                        0.19,
                                     decoration: BoxDecoration(
                                         image: DecorationImage(
                                             fit: BoxFit.cover,
@@ -87,14 +85,13 @@ class YearPageState extends State<YearPage> {
                                   )
                                 ],
                               ),
-                              color: Colors.redAccent[100],
+                              color: Colors.brown[300],
                             ),
                           ),
                         ),
                       ))
                   .toList(),
             ),
-    
     );
   }
 }

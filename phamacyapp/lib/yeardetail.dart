@@ -97,10 +97,10 @@ class YearDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepOrangeAccent[50],
+      backgroundColor: Colors.teal[100],
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.deepOrangeAccent[100],
+        backgroundColor: Colors.teal[200],
         title: Text(pokemon.name),
       ),
       body: bodyWidget(context),

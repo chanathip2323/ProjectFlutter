@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:phamacyapp/Year.dart';
 import 'package:phamacyapp/home.dart';
-import 'Year.dart';
+
 import 'Zodiac.dart';
 import 'about.dart';
 
@@ -14,6 +15,7 @@ class _BarNavyState extends State<BarNavy> {
   final List<Widget> _children = [
     HomePage(),
     ZodiacPage(),
+    YearPage(),
     AboutMePage(),
     AboutMePage()
   ];
@@ -36,10 +38,10 @@ class _BarNavyState extends State<BarNavy> {
     super.dispose();
   }
 
-// onItemSelected: (index) {
-//           setState(() => _selectedIndex = index);
-//           _pageController.jumpToPage(index);
-//         },
+  //onItemSelected: (index) {
+  //setState(() => _selectedIndex = index);
+  //_pageController.jumpToPage(index);
+  //},
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +57,7 @@ class _BarNavyState extends State<BarNavy> {
           BottomNavigationBarItem(
               title: Text('Inhouses'), icon: Icon(Icons.star)),
           BottomNavigationBarItem(
-            title: Text('herb'),
+            title: Text('Herb'),
             icon: Icon(Icons.pets),
           ),
           BottomNavigationBarItem(
