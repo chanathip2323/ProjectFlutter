@@ -37,6 +37,7 @@ flutter:
      - assets/icon/ya2.png
      - assets/medication.png
      - assets/medication.png
+     
 
 
 cupertino_icons: ^0.1.2  
